@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 const IntroSection = () => {
     return (
         <div id="intro" className='bg-[#EAEAEA] scroll-smooth flex flex-col items-center justify-center w-full  min-h-screen'>
-            <Image src={mylogo} width={150} className='mb-10' />
+            <Image src={mylogo} width={150} className='mb-10' alt='mylogo' />
             <h1 className='text-2xl md:text-5xl leading-relaxed md:leading-loose'>Hi , I'm Shahriyar Jamali</h1>
             <p className='text-xl md:text-3xl leading-relaxed  md:leading-loose font-light'>I am a  <span className='text-[#a47c4b] '>
 

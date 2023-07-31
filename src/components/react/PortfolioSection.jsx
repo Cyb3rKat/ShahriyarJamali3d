@@ -901,12 +901,15 @@ const PortfolioSection = () => {
                     {!viewall && cropedData.map((item) => {
                         return (
                             <motion.div
+                                key={item.id}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 className='relative h-32 w-32 sm:h-48 sm:w-48 md:h-56 md:w-56 overflow-hidden'
                             >
-                                <Image src={`${item.url}`} fill className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
+                                <Image src={`${item.url}`} fill
+                                    alt={item.category}
+                                    className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
                             </motion.div>
                         )
                     })}
@@ -914,12 +917,15 @@ const PortfolioSection = () => {
                     {viewall && filtereddata.map((item) => {
                         return (
                             <motion.div
+                                key={item.id}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 className='relative h-32 w-32 sm:h-48 sm:w-48 md:h-56 md:w-56 overflow-hidden'
                             >
-                                <Image src={`${item.url}`} fill className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
+                                <Image src={`${item.url}`}
+                                    fill
+                                    alt={item.category} className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
                             </motion.div>
                         )
                     })}

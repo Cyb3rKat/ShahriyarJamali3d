@@ -9,14 +9,16 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function ShahriyarModel(props) {
-    const { nodes, materials } = useGLTF("/model2.glb");
+    const { nodes, materials } = useGLTF("/Jamali-Final-3.glb")
+
+
     return (
         <group {...props} dispose={null}>
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Left_Wall001.geometry}
-                material={materials.Walls}
+                material={materials["Walls.003"]}
             />
             <mesh
                 castShadow
@@ -27,134 +29,8 @@ export default function ShahriyarModel(props) {
             <mesh
                 castShadow
                 receiveShadow
-                geometry={nodes.Cube.geometry}
-                material={materials["Sealing Lights"]}
-                position={[-9.622, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube001.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[-6.386, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube002.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[0.085, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube003.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[-3.151, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube004.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[6.555, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube005.geometry}
-                material={materials["Sealing Lights.005"]}
-                position={[9.791, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube006.geometry}
-                material={materials["Sealing Lights.005"]}
-                position={[3.32, 5.961, 13.401]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube008.geometry}
-                material={materials["Sealing Lights.005"]}
-                position={[3.32, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube009.geometry}
-                material={materials["Sealing Lights.005"]}
-                position={[9.791, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube010.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[6.555, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube011.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[-3.151, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube012.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[0.085, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube013.geometry}
-                material={materials["Sealing Lights.001"]}
-                position={[-6.386, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Cube014.geometry}
-                material={materials["Sealing Lights"]}
-                position={[-9.622, 5.959, 10.166]}
-                rotation={[-Math.PI, 0, -Math.PI]}
-                scale={[-0.647, -0.012, -0.647]}
-            />
-            <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Image_3002.geometry}
-                material={materials["Allah (1) - 2018.001"]}
+                material={materials["Material.006"]}
                 position={[-15.147, 1.23, -9.017]}
                 rotation={[Math.PI / 2, 0, -Math.PI]}
                 scale={[1.31, 1.31, 1.704]}
@@ -163,7 +39,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_2001.geometry}
-                material={materials["Allah (1) - 2018.002"]}
+                material={materials["SBWORKING_Material.010"]}
                 position={[-17.634, 1.366, -11.274]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={[1.737, 1.737, 2.07]}
@@ -172,7 +48,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_5.geometry}
-                material={materials["Allah (1) - 2018.003"]}
+                material={materials["Material.011"]}
                 position={[-12.838, 1.194, -9.274]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={1.737}
@@ -181,7 +57,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_4.geometry}
-                material={materials["Allah (1) - 2018.004"]}
+                material={materials["Material.008"]}
                 position={[-12.838, 1.194, -11.603]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={1.737}
@@ -190,7 +66,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Middle_Stand.geometry}
-                material={materials.Walls}
+                material={materials["Walls.001"]}
             />
             <mesh
                 castShadow
@@ -208,21 +84,11 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_2059.geometry}
-                material={materials["Allah (1) - 2018.128"]}
+                material={materials["Material.009"]}
                 position={[-17.634, 1.366, -13.274]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={[1.737, 1.737, 2.07]}
             />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.portrait002.geometry}
-                material={materials["portrait.002"]}
-                position={[-1.301, 2.864, 3.226]}
-                rotation={[1.569, 0, -Math.PI / 2]}
-                scale={3.3}
-            />
-
             <mesh
                 castShadow
                 receiveShadow
@@ -236,7 +102,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Middle_Stand001.geometry}
-                material={materials.Walls}
+                material={materials["Walls.006"]}
             />
             <mesh
                 castShadow
@@ -257,13 +123,13 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Cylinder003.geometry}
-                material={materials.wire_115115115}
+                material={materials["Glass.001"]}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Text002.geometry}
-                material={materials.Walls}
+                material={materials["BackDrop.008"]}
                 position={[-2.213, 1.924, -1.819]}
                 rotation={[1.144, -0.801, 0.973]}
                 scale={0.325}
@@ -274,7 +140,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_1004.geometry}
                 material={materials["Allah (1) - 2018"]}
                 position={[-14.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -283,7 +149,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2.geometry}
                 material={materials["Allah (1) - 2018.021"]}
                 position={[-12.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -292,7 +158,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_3001.geometry}
                 material={materials["Allah (1) - 2018.022"]}
                 position={[-10.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -301,7 +167,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_4001.geometry}
                 material={materials["Allah (1) - 2018.023"]}
                 position={[-8.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -310,7 +176,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_5001.geometry}
                 material={materials["Allah (1) - 2018.024"]}
                 position={[-6.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -319,7 +185,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_7.geometry}
                 material={materials["Allah (1) - 2018.025"]}
                 position={[-2.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -328,7 +194,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_6001.geometry}
                 material={materials["Allah (1) - 2018.026"]}
                 position={[-4.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -337,7 +203,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_8.geometry}
                 material={materials["Allah (1) - 2018.027"]}
                 position={[-0.815, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -346,7 +212,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_9.geometry}
                 material={materials["Allah (1) - 2018.028"]}
                 position={[1.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -355,7 +221,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_10.geometry}
                 material={materials["Allah (1) - 2018.029"]}
                 position={[3.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -373,7 +239,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_12.geometry}
                 material={materials["Allah (1) - 2018.031"]}
                 position={[7.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -382,7 +248,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_13.geometry}
                 material={materials["Allah (1) - 2018.032"]}
                 position={[9.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -391,7 +257,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_14.geometry}
                 material={materials["Allah (1) - 2018.033"]}
                 position={[11.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -400,7 +266,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_15.geometry}
                 material={materials["Allah (1) - 2018.034"]}
                 position={[13.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -409,14 +275,14 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_16.geometry}
                 material={materials["Allah (1) - 2018.035"]}
                 position={[15.185, 1.459, 17.571]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Wall.geometry}
-                material={materials.Walls}
+                material={materials["Walls.002"]}
             />
             <mesh
                 castShadow
@@ -487,7 +353,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_5004.geometry}
                 material={materials["1. Allah - 2021.018"]}
                 position={[17.581, 3.825, 15.629]}
-                rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+                rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.715}
             />
             <mesh
@@ -496,7 +362,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_5005.geometry}
                 material={materials["1. Allah - 2021.019"]}
                 position={[17.581, 1.825, 15.629]}
-                rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+                rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.715}
             />
             <mesh
@@ -505,7 +371,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_5006.geometry}
                 material={materials["1. Allah - 2021.020"]}
                 position={[17.581, 1.825, 12.629]}
-                rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+                rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.715}
             />
             <mesh
@@ -514,7 +380,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_5007.geometry}
                 material={materials["1. Allah - 2021.021"]}
                 position={[17.581, 3.825, 12.629]}
-                rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+                rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.715}
             />
             <mesh
@@ -539,7 +405,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Cylinder002.geometry}
-                material={materials.wire_115115115}
+                material={materials["Glass.002"]}
                 position={[-16.625, 1.583, 17.215]}
                 rotation={[0, -1.52, 0.693]}
                 scale={[-0.406, -0.017, -0.406]}
@@ -548,7 +414,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Text001.geometry}
-                material={materials.Walls}
+                material={materials["BackDrop.001"]}
                 position={[-16.612, 1.578, 17.144]}
                 rotation={[2.456, -0.005, 3.104]}
                 scale={0.284}
@@ -665,7 +531,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_2010.geometry}
-                material={materials["Allah (1) - 2018.044"]}
+                material={materials["Allah (1) - 2018.048"]}
                 position={[17.573, 1.551, -6.738]}
                 rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.311}
@@ -674,7 +540,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_2011.geometry}
-                material={materials["Allah (1) - 2018.043"]}
+                material={materials["Allah (1) - 2018.049"]}
                 position={[17.573, 1.551, -11.238]}
                 rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.311}
@@ -683,7 +549,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_2012.geometry}
-                material={materials["Allah (1) - 2018.042"]}
+                material={materials["Allah (1) - 2018.050"]}
                 position={[17.573, 1.551, -9.738]}
                 rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.311}
@@ -692,7 +558,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_1008.geometry}
-                material={materials["Allah (1) - 2018.046"]}
+                material={materials["Allah (1) - 2018.051"]}
                 position={[17.573, 1.551, -8.238]}
                 rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={1.311}
@@ -737,7 +603,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Cylinder005.geometry}
-                material={materials.wire_115115115}
+                material={materials["Glass.003"]}
                 position={[13.955, 1.583, 10.16]}
                 rotation={[Math.PI, 0.798, -2.449]}
                 scale={[-0.406, -0.017, -0.406]}
@@ -746,7 +612,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Text003.geometry}
-                material={materials.Walls}
+                material={materials["BackDrop.002"]}
                 position={[13.962, 1.63, 10.156]}
                 rotation={[0.831, 0.541, -0.547]}
                 scale={0.284}
@@ -758,7 +624,7 @@ export default function ShahriyarModel(props) {
                 material={materials["Allah (1) - 2018.069"]}
                 position={[-2.996, 1.551, -12.548]}
                 rotation={[Math.PI / 2, 0, Math.PI]}
-                scale={1.311}
+                scale={[0.917, 1.311, 1.311]}
             />
             <mesh
                 castShadow
@@ -854,7 +720,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Image_2021.geometry}
-                material={materials["Allah (1) - 2018.044"]}
+                material={materials["Allah (1) - 2018.062"]}
                 position={[4.56, 1.551, -17.411]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={1.311}
@@ -916,13 +782,13 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Wall001.geometry}
-                material={materials.Walls}
+                material={materials["Walls.004"]}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Wall002.geometry}
-                material={materials.Walls}
+                material={materials["Walls.005"]}
             />
             <mesh
                 castShadow
@@ -939,7 +805,7 @@ export default function ShahriyarModel(props) {
                 material={materials["Allah (1) - 2018.076"]}
                 position={[0.004, 1.551, -12.548]}
                 rotation={[Math.PI / 2, 0, Math.PI]}
-                scale={1.311}
+                scale={[0.97, 1.311, 1.311]}
             />
             <mesh
                 castShadow
@@ -954,7 +820,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Text005.geometry}
-                material={materials.Walls}
+                material={materials["BackDrop.003"]}
                 position={[-8.626, 1.578, 10.142]}
                 rotation={[2.42, -0.29, 2.862]}
                 scale={0.249}
@@ -963,7 +829,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Cylinder007.geometry}
-                material={materials.wire_115115115}
+                material={materials["Glass.004"]}
                 position={[-8.612, 1.583, 10.213]}
                 rotation={[0, -1.148, 0.693]}
                 scale={[-0.406, -0.017, -0.406]}
@@ -1118,7 +984,7 @@ export default function ShahriyarModel(props) {
                 material={materials["Allah (1) - 2018.099"]}
                 position={[10.203, 1.551, -12.53]}
                 rotation={[Math.PI / 2, 0, -Math.PI]}
-                scale={[1.502, 1.311, 1.311]}
+                scale={[1.298, 1.731, 1.731]}
             />
             <mesh
                 castShadow
@@ -1127,7 +993,7 @@ export default function ShahriyarModel(props) {
                 material={materials["Allah (1) - 2018.100"]}
                 position={[8.203, 1.551, -12.53]}
                 rotation={[Math.PI / 2, 0, -Math.PI]}
-                scale={[1.502, 1.311, 1.311]}
+                scale={[1.256, 1.704, 1.704]}
             />
             <mesh
                 castShadow
@@ -1136,7 +1002,7 @@ export default function ShahriyarModel(props) {
                 material={materials["Allah (1) - 2018.101"]}
                 position={[6.203, 1.551, -12.53]}
                 rotation={[Math.PI / 2, 0, -Math.PI]}
-                scale={[1.502, 1.311, 1.311]}
+                scale={[0.969, 1.709, 1.709]}
             />
             <mesh
                 castShadow
@@ -1144,7 +1010,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2041.geometry}
                 material={materials["Allah (1) - 2018.109"]}
                 position={[-6.815, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1153,7 +1019,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2040.geometry}
                 material={materials["Allah (1) - 2018.110"]}
                 position={[-4.815, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1162,7 +1028,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2042.geometry}
                 material={materials["Allah (1) - 2018.111"]}
                 position={[-2.815, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1171,7 +1037,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2043.geometry}
                 material={materials["Allah (1) - 2018.112"]}
                 position={[-0.815, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1180,7 +1046,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2044.geometry}
                 material={materials["Allah (1) - 2018.113"]}
                 position={[1.185, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1189,7 +1055,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2045.geometry}
                 material={materials["Allah (1) - 2018.114"]}
                 position={[3.185, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1198,7 +1064,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2046.geometry}
                 material={materials["Allah (1) - 2018.115"]}
                 position={[5.185, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1207,7 +1073,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2047.geometry}
                 material={materials["Allah (1) - 2018.116"]}
                 position={[7.185, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1216,7 +1082,7 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2048.geometry}
                 material={materials["Allah (1) - 2018.117"]}
                 position={[9.185, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
@@ -1225,14 +1091,14 @@ export default function ShahriyarModel(props) {
                 geometry={nodes.Image_2049.geometry}
                 material={materials["Allah (1) - 2018.118"]}
                 position={[11.185, 1.459, 10.894]}
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[Math.PI / 2, 0, Math.PI]}
                 scale={1.311}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Text007.geometry}
-                material={materials["Material.001"]}
+                material={materials["Material.004"]}
                 position={[5.599, 2.699, 10.925]}
                 rotation={[Math.PI / 2, 0, Math.PI]}
             />
@@ -1570,7 +1436,7 @@ export default function ShahriyarModel(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Commercial_Title_Design.geometry}
-                material={materials["Material.001"]}
+                material={materials["Material.005"]}
                 position={[-17.611, 5.127, 4.731]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={0.369}
@@ -1827,37 +1693,7 @@ export default function ShahriyarModel(props) {
             <mesh
                 castShadow
                 receiveShadow
-                geometry={nodes.Main_Building_Baked.geometry}
-                material={materials.FinalBake_Baked}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Left_Wall001_Baked.geometry}
-                material={materials.FinalBake_Baked}
-            />
-            <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Middle_Stand001_Baked.geometry}
-                material={materials.FinalBake_Baked}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Wall_Baked.geometry}
-                material={materials.FinalBake_Baked}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Wall001_Baked.geometry}
-                material={materials.FinalBake_Baked}
-            />
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Wall002_Baked.geometry}
                 material={materials.FinalBake_Baked}
             />
             <mesh
@@ -1869,17 +1705,46 @@ export default function ShahriyarModel(props) {
             <mesh
                 castShadow
                 receiveShadow
-                geometry={nodes.Cube_1.geometry}
+                geometry={nodes.Left_Wall001_Baked.geometry}
+                material={materials["Alisa final Bake1_Baked"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Wall001_Baked.geometry}
+                material={materials["Alisa final Bake1_Baked"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Main_Building_Baked_Baked.geometry}
+                material={materials["Alisa final Bake1_Baked"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Wall_Baked_Baked.geometry}
+                material={materials["Alisa final Bake1_Baked"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Wall002_Baked_Baked.geometry}
+                material={materials["Alisa final Bake1_Baked"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Cube.geometry}
                 material={materials.Walls}
             />
             <mesh
                 castShadow
                 receiveShadow
-                geometry={nodes.Cube_2.geometry}
+                geometry={nodes.Cube_1.geometry}
                 material={materials.Floor}
             />
-        </group>
-    );
+        </group>);
 }
 
-useGLTF.preload("/model2.glb");
+useGLTF.preload("/Jamali-Final-3.glb");

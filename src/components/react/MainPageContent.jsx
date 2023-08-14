@@ -13,6 +13,7 @@ import contactsvg from '/public/contact.svg'
 import speechsvg from '/public/speech.svg'
 import Image from 'next/image';
 import Link from 'next/link';
+import SkillsSection from './SkillsSection';
 
 
 const MainPageContent = () => {
@@ -22,15 +23,16 @@ const MainPageContent = () => {
                 <IntroSection />
                 <AboutMeSection />
                 <PortfolioSection />
+                <SkillsSection />
                 <ContactPage />
             </div>
-            <div className='fixed right-5 h-full  w-10 flex flex-col items-center justify-center space-y-2'>
-                <Link href={'#intro'}><Image className='bg-black p-2 rounded-full' src={homesvg} width={50} height={50} /></Link>
-                <Link href={'#about'}><Image className='bg-black p-2 rounded-full' src={aboutsvg} width={50} height={50} /></Link>
-                <Link href={'#portfolio'}><Image className='bg-black p-2 rounded-full' src={briefcasesvg} width={50} height={50} /></Link>
-                <Link href={'#contact'}><Image className='bg-black p-2 rounded-full' src={speechsvg} width={50} height={50} /></Link>
+            {/* <div className='fixed right-5 h-full  w-10 flex flex-col items-center justify-center space-y-2'>
+                <Link href={'#intro'}><Image className='bg-[#0563bb] p-2 rounded-full' src={homesvg} width={40} height={40} /></Link>
+                <Link href={'#about'}><Image className='bg-[#0563bb] p-2 rounded-full' src={aboutsvg} width={40} height={40} /></Link>
+                <Link href={'#portfolio'}><Image className='bg-[#0563bb] p-2 rounded-full' src={briefcasesvg} width={40} height={40} /></Link>
+                <Link href={'#contact'}><Image className='bg-[#0563bb] p-2 rounded-full' src={speechsvg} width={40} height={40} /></Link>
 
-            </div>
+            </div> */}
         </>
     )
 }

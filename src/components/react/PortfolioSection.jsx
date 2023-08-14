@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const json = [
     {
@@ -872,26 +873,30 @@ const json = [
 const PortfolioSection = () => {
     const [category, setCategory] = useState('calligraphy')
     const [viewall, setViewall] = useState(false)
-
+    const [index, setIndex] = React.useState(1);
     const filtereddata = json.filter((item) => item.category == category)
     const cropedData = filtereddata.slice(0, 12)
+
+
+
+
 
     return (
 
         <div id='portfolio' className='bg-[#EAEAEA] flex flex-col items-center justify-center min-h-screen pt-10'>
             <h1 className='text-3xl mb-10'>Portfolio</h1>
             <div className='mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2'>
-                <button className={`border-[#a47c4b] border-2	  px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-[#a47c4b] text-white' : ''}`}
+                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-[#0563bb] text-white' : ''}`}
                     onClick={e => setCategory('calligraphy')}
 
                 >Calligraphy</button>
-                <button className={`border-[#a47c4b] border-2	  px-10 py-2  rounded-md ${category == 'islamic-art' ? 'bg-[#a47c4b] text-white' : ''}`}
+                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'islamic-art' ? 'bg-[#0563bb] text-white' : ''}`}
                     onClick={e => setCategory('islamic-art')}
                 >Islamic Art</button>
-                <button className={`border-[#a47c4b] border-2	  px-10 py-2  rounded-md ${category == 'symbolic-icon' ? 'bg-[#a47c4b] text-white' : ''}`}
+                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'symbolic-icon' ? 'bg-[#0563bb] text-white' : ''}`}
                     onClick={e => setCategory('symbolic-icon')}
                 >Symbolic Icons</button>
-                <button className={`border-[#a47c4b] border-2	  px-10 py-2  rounded-md ${category == 'title-design' ? 'bg-[#a47c4b] text-white' : ''}`}
+                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'title-design' ? 'bg-[#0563bb] text-white' : ''}`}
                     onClick={e => setCategory('title-design')}
                 >Title Design</button>
             </div>
@@ -901,15 +906,17 @@ const PortfolioSection = () => {
                     {!viewall && cropedData.map((item) => {
                         return (
                             <motion.div
-                                key={item.id}
+                                key={`${item.id}  ${item.url}`}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 className='relative h-32 w-32 sm:h-48 sm:w-48 md:h-56 md:w-56 overflow-hidden'
                             >
-                                <Image src={`${item.url}`} fill
-                                    alt={item.category}
-                                    className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
+                                <Link href={`/portfolio/${item.id}`}>
+                                    <Image src={`${item.url}`} fill
+                                        alt={item.category}
+                                        className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
+                                </Link>
                             </motion.div>
                         )
                     })}
@@ -917,7 +924,7 @@ const PortfolioSection = () => {
                     {viewall && filtereddata.map((item) => {
                         return (
                             <motion.div
-                                key={item.id}
+                                key={`${item.id}  ${item}`}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -929,14 +936,19 @@ const PortfolioSection = () => {
                             </motion.div>
                         )
                     })}
+
+
+
+
+
                 </div>
 
-                <button className='bg-[#a47c4b] text-sm px-4 md:px-10 py-2 mt-10 text-white rounded-md'
+                <button className='bg-[#0563bb] text-sm px-4 md:px-10 py-2 mt-10 text-white rounded-md'
                     onClick={e => setViewall(!viewall)}
                 >{viewall ? 'View Less' : 'View More'}</button>
-            </AnimatePresence>
+            </AnimatePresence >
 
-        </div>
+        </div >
 
     )
 }

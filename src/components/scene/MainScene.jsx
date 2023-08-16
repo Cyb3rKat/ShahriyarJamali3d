@@ -30,7 +30,7 @@ const MainScene = () => {
             <spotLight ref={lightref} intensity={10} color={'white'} position={[-11, 2, 10]} />
             <spotLight ref={lightref} intensity={100} color={'white'} position={[-6, 6, 1]} />
             <spotLight ref={lightref} intensity={100} color={'white'} position={[-17, 10, 20]} />
-            <spotLight ref={lightref} intensity={200} color={'white'} position={[-17, 4, -12]} />
+
             <spotLight ref={lightref} intensity={200} color={'black'} position={[-17, 1, -12]} />
 
 

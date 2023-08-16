@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import ModalImage from "react-modal-image";
 
 const json = [
     {
@@ -873,30 +874,41 @@ const json = [
 const PortfolioSection = () => {
     const [category, setCategory] = useState('calligraphy')
     const [viewall, setViewall] = useState(false)
-    const [index, setIndex] = React.useState(1);
+    const [myindex, setIndex] = React.useState(2);
+
     const filtereddata = json.filter((item) => item.category == category)
+
+    const [ModalImageIndex, setModalImageIndex] = useState(-1)
+
+    let mymodalImage = []
+    let modalImageurl = ''
+
     const cropedData = filtereddata.slice(0, 12)
 
+    useEffect(() => {
+        mymodalImage = json.filter((item) => item.id == ModalImageIndex)
 
-
+        modalImageurl = mymodalImage[0]?.url
+        console.log('modalImageurl changed to', modalImageurl)
+    }, [ModalImageIndex])
 
 
     return (
 
-        <div id='portfolio' className='bg-[#EAEAEA] flex flex-col items-center justify-center min-h-screen pt-10'>
-            <h1 className='text-3xl mb-10'>Portfolio</h1>
+        <div id='portfolio' className='relative bg-jamali-black flex flex-col items-center justify-center min-h-screen pt-10'>
+            <h1 className='text-3xl mb-10 text-white'>Portfolio</h1>
             <div className='mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2'>
-                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-[#0563bb] text-white' : ''}`}
+                <button className={`border-white border-2   px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('calligraphy')}
 
                 >Calligraphy</button>
-                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'islamic-art' ? 'bg-[#0563bb] text-white' : ''}`}
+                <button className={`border-white border-2 	  px-10 py-2  rounded-md ${category == 'islamic-art' ? 'bg-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('islamic-art')}
                 >Islamic Art</button>
-                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'symbolic-icon' ? 'bg-[#0563bb] text-white' : ''}`}
+                <button className={`border-white border-2 	  px-10 py-2  rounded-md ${category == 'symbolic-icon' ? 'bg-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('symbolic-icon')}
                 >Symbolic Icons</button>
-                <button className={`border-[#0563bb] border-2	  px-10 py-2  rounded-md ${category == 'title-design' ? 'bg-[#0563bb] text-white' : ''}`}
+                <button className={`border-white border-2 	  px-10 py-2  rounded-md ${category == 'title-design' ? 'bg-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('title-design')}
                 >Title Design</button>
             </div>
@@ -912,11 +924,11 @@ const PortfolioSection = () => {
                                 exit={{ opacity: 0 }}
                                 className='relative h-32 w-32 sm:h-48 sm:w-48 md:h-56 md:w-56 overflow-hidden'
                             >
-                                <Link href={`/portfolio/${item.id}`}>
+                                <div onClick={e => setModalImageIndex(item)} >
                                     <Image src={`${item.url}`} fill
                                         alt={item.category}
                                         className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
-                                </Link>
+                                </div>
                             </motion.div>
                         )
                     })}
@@ -931,22 +943,32 @@ const PortfolioSection = () => {
                                 className='relative h-32 w-32 sm:h-48 sm:w-48 md:h-56 md:w-56 overflow-hidden'
                             >
                                 <Image src={`${item.url}`}
+                                    onClick={e => setModalImageIndex(item)}
                                     fill
                                     alt={item.category} className='hover:scale-125 transition-all duration-1000 object-cover overflow-hidden' />
                             </motion.div>
                         )
                     })}
 
-
-
-
-
                 </div>
 
-                <button className='bg-[#0563bb] text-sm px-4 md:px-10 py-2 mt-10 text-white rounded-md'
+                <button className='bg-white text-black text-sm px-4 md:px-10 py-2 mt-10 mb-20  rounded-md'
                     onClick={e => setViewall(!viewall)}
                 >{viewall ? 'View Less' : 'View More'}</button>
+
+
+
             </AnimatePresence >
+
+            {ModalImageIndex !== -1 && <div className='fixed  top-0 left-0 right-0 bottom-0  flex flex-col justify-center items-center' >
+
+                <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-80' onClick={e => setModalImageIndex(-1)}></div>
+
+                <img src={`${ModalImageIndex.url}`} className='z-10'
+                    alt="Hello World!" />
+
+                <button onClick={e => setModalImageIndex(-1)} className='bg-white z-10 mt-10 px-8 py-3'>Close</button>
+            </div>}
 
         </div >
 

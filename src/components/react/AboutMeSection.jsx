@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import mylogo from '/public/social/shahriyar-logo.svg'
 import Image from "next/image";
 import { Raleway, Poppins, Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
-import engflag from '../../../public/england.jpg'
-import irflag from '../../../public/iran.png'
-import arflag from '../../../public/arabic.png'
+
 
 const yekan = localFont({
     src: '../../../public/font/Yekan.woff'
+})
+
+
+const arabicFont = localFont({
+    src: '../../../public/font/AdobeArabic-Regular.otf'
 })
 
 const opensans = Open_Sans({
@@ -33,31 +35,30 @@ const raleway = Raleway({
 const AboutMeSection = () => {
 
     const [aboutmeLang, setAboutmeLang] = useState('en')
+    const [activelang, setActiveLang] = useState('en')
 
 
 
     return (
-        <div id='about' className={`  font-light wrapper min-h-screen flex flex-col justify-center items-center p-20 md:flex-row-reverse  md:space-x-5  space-y-10  w-full `}>
+        <div id='about' className={`  font-light wrapper bg-jamali-blue min-h-screen flex flex-col justify-center items-center p-20 md:flex-row-reverse  md:space-x-5  space-y-10  w-full `}>
 
             <div id='AboutMeWrapper' className='space-y-10  md:pt-5'>
 
-                <div className={` ${raleway.className} flex justify-between mt-20`}>
-                    <div>
+                <div className={` ${raleway.className} flex  mt-20`}>
+                    <div className='w-full text-white'>
                         <h1 className='text-[20] md:text-[28px] font-extralight'>About</h1>
                         <h1 className=' text-[28px] md:text-[48px] font-black'>Shahriyar</h1>
-                        <div className='mt-5 border-b-[10px] border-[#0563bb] w-32'></div>
+                        <div className='mt-5 border-b-[2px] border-white w-full'></div>
                     </div>
-                    <div className={`image flex justify-center  items-end  relative w-[100px] h-[100px]  md:w-[150] md:h-[150]  `}>
-                        <Image src={mylogo} alt='shahriyar jamali Self portrait' fill />
-                    </div>
+
                 </div>
 
                 <div id='AboutMe--Information__wrapper' className={` ${opensans.className} flex flex-row-reverse justify-between `}>
 
-                    <div className=" flex  flex-col information-wrapper space-y-5 w-full max-w-3xl text-justify flex-wrap text-[#464646]">
+                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl text-justify flex-wrap text-white`}>
 
                         {aboutmeLang == 'en' && <>
-                            <p className=' '>
+                            <p >
                                 Shahriyar Jamali Kapk, an Iranian Calligraphy artist. He was born in Tehran and developed a deep passion for calligraphy from an early age. Throughout his life, he embraced the power of art and ideation to bridge the gap between humanity and the divine. <br></br>
                             </p><p >
                                 <span className='text-xl font-bold'> As an artist and ideator,</span><br></br> His mission is to promote love and create works that serve as a conduit between mankind and God. His art is a spiritual journey, with each stroke and composition intended to evoke a sense of connection, beauty, and transcendence. Shahriyar believes that art embodies truth, and he views the pursuit of truth as an infinite and boundless endeavor.<br></br>
@@ -75,7 +76,7 @@ const AboutMeSection = () => {
 
                         </>}
 
-                        {aboutmeLang == 'ir' && <div className={`rtl leading-loose ${yekan.className} `}>
+                        {aboutmeLang == 'ir' && <div className={`rtl leading-loose text-xl ${arabicFont.className} `}>
                             <p className=' '>
                                 شهریار جمالی کاپک، هنرمند خوشنویس ایرانی. او در تهران متولد شد و از همان دوران ابتدایی علاقه‌ای عمیقی به خوشنویسی در خود ایجاد کرد. او در طول زندگی‌اش از قدرت هنر و ایده‌پردازی برای پر کردن شکاف بین انسانیت و الهیت استفاده کرده است.<br></br>
                             </p><p className='mt-5'>
@@ -95,7 +96,7 @@ const AboutMeSection = () => {
                         </div>}
 
 
-                        {aboutmeLang == 'ar' && <div className={`rtl leading-loose ${yekan.className} `}>
+                        {aboutmeLang == 'ar' && <div className={`rtl leading-loose text-xl ${arabicFont.className} `}>
                             <p className=' '>
                                 شهريار جمالي كابيك، خطاط إيراني. ولد في طهران وطور اهتماماً عميقاً بالفن الخط منذ سن مبكرة.
                                 طوال حياته إستخدم قوة الفن والفكر لسد الفجوة بين الإنسانية والالهيت.
@@ -120,9 +121,18 @@ const AboutMeSection = () => {
                     </div>
                 </div>
                 <div className='flex space-x-3 w-full justify-center'>
-                    <Image src={engflag} width={50} height={50} className='rounded-full' onClick={e => setAboutmeLang('en')} />
-                    <Image src={irflag} width={50} height={50} className='rounded-full' onClick={e => setAboutmeLang('ir')} />
-                    <Image src={arflag} width={50} height={50} className='rounded-full' onClick={e => setAboutmeLang('ar')} />
+                    <p className={`hover:cursor-pointer border border-1 border-white px-4 py-2 rounded-full  ${activelang == 'en' ? 'bg-white text-black' : 'text-white'}`} onClick={e => {
+                        setAboutmeLang('en')
+                        setActiveLang('en')
+                    }} >English</p>
+                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ir' ? 'bg-white text-black' : 'text-white'}`} onClick={e => {
+                        setAboutmeLang('ir')
+                        setActiveLang('ir')
+                    }} >Persian</p>
+                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ar' ? 'bg-white text-black' : 'text-white'}`} onClick={e => {
+                        setAboutmeLang('ar')
+                        setActiveLang('ar')
+                    }} >Arabic</p>
                 </div>
             </div>
 

@@ -26,7 +26,7 @@ const SkillsSection = () => {
     return (
         <div id='about' className={` bg-jamali-blue font-light wrapper  flex flex-col justify-center items-center p-20 text-white  md:space-x-5   w-full `}>
 
-            <h1 className={` ${raleway.className} font-bold mb-10 text-3xl border-white border-b-4 pb-3`}>SKILLS</h1>
+            <h1 className={` ${poppins.className} mb-10 text-[20] md:text-[28px]  text-jamali-white  pb-3`}>SKILLS</h1>
 
 
             <div className={` ${poppins.className}  grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl`}>
@@ -37,7 +37,7 @@ const SkillsSection = () => {
                         <p>90%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="90" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="90" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
@@ -46,7 +46,7 @@ const SkillsSection = () => {
                         <p>70%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="70" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="70" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
@@ -55,7 +55,7 @@ const SkillsSection = () => {
                         <p>90%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="90" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="90" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
@@ -64,16 +64,16 @@ const SkillsSection = () => {
                         <p>80%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="80" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="80" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <div className='flex justify-between'>
                         <p>Time Management</p>
-                        <p>70%</p>
+                        <p>100%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="70" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="100" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
@@ -82,7 +82,7 @@ const SkillsSection = () => {
                         <p>90%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="90" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="90" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
@@ -91,7 +91,7 @@ const SkillsSection = () => {
                         <p>100%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="100" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="100" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
                 <div className='flex flex-col space-y-2'>
@@ -100,7 +100,7 @@ const SkillsSection = () => {
                         <p>70%</p>
 
                     </div>
-                    <ProgressBar baseBgColor="#2a4683" completed="70" bgColor={'white'} borderRadius="" customLabel=' ' height='10px' />
+                    <ProgressBar baseBgColor="#2a4683" completed="70" bgColor={'#c7ccd0'} borderRadius="" customLabel=' ' height='10px' />
 
                 </div>
 

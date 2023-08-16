@@ -898,17 +898,17 @@ const PortfolioSection = () => {
         <div id='portfolio' className='relative bg-jamali-black flex flex-col items-center justify-center min-h-screen pt-10'>
             <h1 className='text-3xl mb-10 text-white'>Portfolio</h1>
             <div className='mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2'>
-                <button className={`border-white border-2   px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-white text-black' : 'text-white'}`}
+                <button className={`border-jamali-white border-2   px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-jamali-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('calligraphy')}
 
                 >Calligraphy</button>
-                <button className={`border-white border-2 	  px-10 py-2  rounded-md ${category == 'islamic-art' ? 'bg-white text-black' : 'text-white'}`}
+                <button className={`border-jamali-white border-2 	  px-10 py-2  rounded-md ${category == 'islamic-art' ? 'bg-jamali-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('islamic-art')}
                 >Islamic Art</button>
-                <button className={`border-white border-2 	  px-10 py-2  rounded-md ${category == 'symbolic-icon' ? 'bg-white text-black' : 'text-white'}`}
+                <button className={`border-jamali-white border-2 	  px-10 py-2  rounded-md ${category == 'symbolic-icon' ? 'bg-jamali-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('symbolic-icon')}
                 >Symbolic Icons</button>
-                <button className={`border-white border-2 	  px-10 py-2  rounded-md ${category == 'title-design' ? 'bg-white text-black' : 'text-white'}`}
+                <button className={`border-jamali-white border-2 	  px-10 py-2  rounded-md ${category == 'title-design' ? 'bg-jamali-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('title-design')}
                 >Title Design</button>
             </div>
@@ -952,7 +952,7 @@ const PortfolioSection = () => {
 
                 </div>
 
-                <button className='bg-white text-black text-sm px-4 md:px-10 py-2 mt-10 mb-20  rounded-md'
+                <button className='bg-jamali-white text-black text-sm px-4 md:px-10 py-2 mt-10 mb-20  rounded-md'
                     onClick={e => setViewall(!viewall)}
                 >{viewall ? 'View Less' : 'View More'}</button>
 
@@ -964,10 +964,10 @@ const PortfolioSection = () => {
 
                 <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-80' onClick={e => setModalImageIndex(-1)}></div>
 
-                <img src={`${ModalImageIndex.url}`} className='z-10'
+                <img src={`${ModalImageIndex.url}`} className='z-10 max-h-[70%] max-w-[70%]'
                     alt="Hello World!" />
 
-                <button onClick={e => setModalImageIndex(-1)} className='bg-white z-10 mt-10 px-8 py-3'>Close</button>
+                <button onClick={e => setModalImageIndex(-1)} className='bg-jamali-white z-10 mt-10 px-8 py-3'>Close</button>
             </div>}
 
         </div >

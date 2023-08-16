@@ -12,6 +12,9 @@ const yekan = localFont({
 const arabicFont = localFont({
     src: '../../../public/font/AdobeArabic-Regular.otf'
 })
+const nazanin = localFont({
+    src: '../../../public/font/BNazanin.ttf'
+})
 
 const opensans = Open_Sans({
     subsets: ['latin'],
@@ -45,17 +48,16 @@ const AboutMeSection = () => {
             <div id='AboutMeWrapper' className='space-y-10  md:pt-5'>
 
                 <div className={` ${raleway.className} flex  mt-20`}>
-                    <div className='w-full text-white'>
-                        <h1 className='text-[20] md:text-[28px] font-extralight'>About</h1>
-                        <h1 className=' text-[28px] md:text-[48px] font-black'>Shahriyar</h1>
-                        <div className='mt-5 border-b-[2px] border-white w-full'></div>
+                    <div className='w-full text-jamali-white'>
+                        <h1 className=' text-[28px] md:text-[48px] '>About Me</h1>
+                        <div className='mt-5 border-b-[2px] border-jamali-white w-full'></div>
                     </div>
 
                 </div>
 
                 <div id='AboutMe--Information__wrapper' className={` ${opensans.className} flex flex-row-reverse justify-between `}>
 
-                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl text-justify flex-wrap text-white`}>
+                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl text-justify flex-wrap text-jamali-white`}>
 
                         {aboutmeLang == 'en' && <>
                             <p >
@@ -65,18 +67,18 @@ const AboutMeSection = () => {
                             </p><p>
                                 With a firm conviction in the transformative potential of art, he channels his creativity into creating intricate calligraphic pieces that convey his profound message of love and spirituality. Through his meticulous craftsmanship and innovative approach, he strives to capture the essence of divine beauty and ignite a spiritual awakening in the hearts of viewers.<br></br></p><p>
 
-                                His calligraphy art serves as a visual testimony to his philosophy. Each piece is a harmonious blend of traditional calligraphic techniques and contemporary expressions, reflecting his unique artistic voice. His works have garnered international recognition for their ability to inspire, uplift, and create a sense of awe and wonder.<br></br>
+                                His calligraphy art serves as a visual testimony to his philosophy. Each piece is a harmonious blend of traditional calligraphic techniques and contemporary expressions, reflecting his unique artistic voice. His works have garnered international recognition for their ability to inspire, uplift, and create a sense of awe and wonder.<br></br></p><p>
 
                                 In addition to his artistic pursuits, Shahriyar continues to explore the boundless potential of design and ideation. He delves into various creative endeavors, seeking to push the boundaries of artistic expression and discover new ways to communicate his vision of love, truth, and spirituality.<br></br></p> <p>
 
                                 His contributions to the world of art and ideation extend beyond his creative endeavors. He actively engages in sharing his knowledge and expertise with aspiring artists, conducting workshops, and mentoring emerging talents. Through his guidance and encouragement, he nurtures a new generation of calligraphy artists who carry forth the torch of artistic expression and spiritual exploration.<br></br> </p><p>
 
-                                Shahriar&apos;s art and thought have touched the hearts and minds of individuals around the world, leaving an indelible mark on the artistic landscape. His unwavering commitment to promoting love and embracing the eternal quest for truth has established him as a visionary artist and thinker, captivating audiences with his profound artistic expressions.
+                                Shahriyar Jamali&apos;s art and thought have touched the hearts and minds of individuals around the world, leaving an indelible mark on the artistic landscape. His unwavering commitment to promoting love and embracing the eternal quest for truth has established him as a visionary artist and thinker, captivating audiences with his profound artistic expressions.
                             </p>
 
                         </>}
 
-                        {aboutmeLang == 'ir' && <div className={`rtl leading-loose text-xl ${arabicFont.className} `}>
+                        {aboutmeLang == 'ir' && <div className={`rtl leading-loose text-xl ${nazanin.className} `}>
                             <p className=' '>
                                 شهریار جمالی کاپک، هنرمند خوشنویس ایرانی. او در تهران متولد شد و از همان دوران ابتدایی علاقه‌ای عمیقی به خوشنویسی در خود ایجاد کرد. او در طول زندگی‌اش از قدرت هنر و ایده‌پردازی برای پر کردن شکاف بین انسانیت و الهیت استفاده کرده است.<br></br>
                             </p><p className='mt-5'>
@@ -121,15 +123,15 @@ const AboutMeSection = () => {
                     </div>
                 </div>
                 <div className='flex space-x-3 w-full justify-center'>
-                    <p className={`hover:cursor-pointer border border-1 border-white px-4 py-2 rounded-full  ${activelang == 'en' ? 'bg-white text-black' : 'text-white'}`} onClick={e => {
+                    <p className={`hover:cursor-pointer border border-1 border-white px-4 py-2 rounded-full  ${activelang == 'en' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('en')
                         setActiveLang('en')
                     }} >English</p>
-                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ir' ? 'bg-white text-black' : 'text-white'}`} onClick={e => {
+                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ir' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ir')
                         setActiveLang('ir')
                     }} >Persian</p>
-                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ar' ? 'bg-white text-black' : 'text-white'}`} onClick={e => {
+                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ar' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ar')
                         setActiveLang('ar')
                     }} >Arabic</p>

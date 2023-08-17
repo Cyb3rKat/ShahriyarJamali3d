@@ -13,7 +13,7 @@ const SideMenu = () => {
             <Link href='/' className=" h-48 vertical-rl w-full -rotate-180  flex items-center text-xl md:text-2xl text-jamali-black ">Shahriyar Jamali</Link>
             <div className=" grow"></div>
             <div className=" h-24 flex flex-col items-center justify-center w-full space-y-5">
-                <a href="tel:+123456789" ><Image alt='Call' src={callIcon} width={22} height={22} /></a>
+                <a href="tel:+989124303631" ><Image alt='Call' src={callIcon} width={22} height={22} /></a>
                 <a href='https://www.instagram.com/shahriyarjamali_artworks/' target='_blank'><Image alt='instagram' src={instagramIcon} /></a>
 
                 <a href='https://www.pinterest.com/shahriyarjamaliartworks/' target='_blank'><Image alt='pintrest' src={pintrestIcon} /></a>

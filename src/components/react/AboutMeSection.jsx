@@ -57,7 +57,7 @@ const AboutMeSection = () => {
 
                 <div id='AboutMe--Information__wrapper' className={` ${opensans.className} flex flex-row-reverse justify-between `}>
 
-                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl text-justify flex-wrap text-jamali-white`}>
+                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl md:text-justify flex-wrap text-jamali-white `}>
 
                         {aboutmeLang == 'en' && <>
                             <p >
@@ -126,15 +126,15 @@ const AboutMeSection = () => {
                     <p className={`hover:cursor-pointer border border-1 border-white px-4 py-2 rounded-full  ${activelang == 'en' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('en')
                         setActiveLang('en')
-                    }} >En</p>
+                    }} >EN</p>
                     <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ir' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ir')
                         setActiveLang('ir')
-                    }} >Fa</p>
+                    }} >FA</p>
                     <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ar' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ar')
                         setActiveLang('ar')
-                    }} >Ar</p>
+                    }} >AR</p>
                 </div>
             </div>
 

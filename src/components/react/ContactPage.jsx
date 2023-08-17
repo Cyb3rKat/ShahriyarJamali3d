@@ -63,13 +63,7 @@ const ContactPage = () => {
                         </div>
                     </div>
 
-                    <div className={`h-full space-y-2 text-left  md:min-w-[500px] mt-10 w-full border-2 border-jamali-white rounded-xl px-2 py-10 sm:p-10`}>
-                        <p className='text-jamali-white text-sm'><span className='text-white mr-4'>Tel:</span>+98 912 430 3631</p>
-                        <p className='text-jamali-white text-sm'><span className='text-white mr-4'>Email:</span>info@ShahriyarJamali.art</p>
-                        <p className='text-jamali-white text-sm'><span className='text-white mr-4'>Instagram:</span><a className='text-jamali-white text-sm' href='https://www.instagram.com/shahriyarjamali_artworks/'>@shahriyarjamali_artworks</a></p>
-                        <p className='text-jamali-white text-sm'><span className='text-white mr-4'>dribbble:</span> dribbble.com/ShahriyarJamali</p>
-                        <p className='text-jamali-white text-sm'><span className='text-white mr-4'>Website:</span>www.ShahriyarJamali.art</p>
-                    </div>
+
 
                     <div className='  w-full  mt-10'>
                         <form ref={form} onSubmit={sendEmail} className='flex flex-col space-y-5 text-white mb-10'>
@@ -92,10 +86,12 @@ const ContactPage = () => {
                     </div>
                 </div>
 
-                <p className='absolute  bottom-0 text-sm text-jamali-white  pb-10'>© All Rights Reserved, Shahriyar Jamali 2023</p>
+                <p className='absolute  bottom-0 text-[10px] text-jamali-white  pb-10'>© All Rights Reserved, Shahriyar Jamali 2023</p>
             </div>
         </>
     )
 }
 
 export default ContactPage
+
+

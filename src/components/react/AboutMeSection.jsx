@@ -49,7 +49,7 @@ const AboutMeSection = () => {
 
                 <div className={` ${raleway.className} flex  mt-20`}>
                     <div className='w-full text-jamali-white'>
-                        <h1 className=' text-[28px] md:text-[48px] '>About Me</h1>
+                        <h1 className=' text-[20px] md:text-[28px] '>About Me</h1>
                         <div className='mt-5 border-b-[2px] border-jamali-white w-full'></div>
                     </div>
 

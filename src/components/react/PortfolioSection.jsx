@@ -912,13 +912,14 @@ const PortfolioSection = () => {
                     onClick={e => setCategory('title-design')}
                 >Title Design</button>
             </div>
-            <AnimatePresence>
+
+            <AnimatePresence key={'portfolio'}>
 
                 <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 relative gap-2 px-10'>
                     {!viewall && cropedData.map((item) => {
                         return (
                             <motion.div
-                                key={`${item.id}  ${item.url}`}
+                                key={`${item.url}`}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -936,7 +937,7 @@ const PortfolioSection = () => {
                     {viewall && filtereddata.map((item) => {
                         return (
                             <motion.div
-                                key={`${item.id}  ${item}`}
+                                key={`${item.url}`}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -956,19 +957,19 @@ const PortfolioSection = () => {
                     onClick={e => setViewall(!viewall)}
                 >{viewall ? 'View Less' : 'View More'}</button>
 
+                {ModalImageIndex !== -1 && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} className='fixed  top-0 left-0 right-0 bottom-0  flex flex-col justify-center items-center' >
 
+                    <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-80' onClick={e => setModalImageIndex(-1)}></div>
+
+                    <img src={`${ModalImageIndex.url}`} className='z-10 max-h-[70%] max-w-[70%]'
+                        alt="Hello World!" />
+
+                    <button onClick={e => setModalImageIndex(-1)} className='bg-jamali-white z-10 mt-10 px-8 py-3'>Close</button>
+                </motion.div>}
 
             </AnimatePresence >
 
-            {ModalImageIndex !== -1 && <div className='fixed  top-0 left-0 right-0 bottom-0  flex flex-col justify-center items-center' >
 
-                <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-80' onClick={e => setModalImageIndex(-1)}></div>
-
-                <img src={`${ModalImageIndex.url}`} className='z-10 max-h-[70%] max-w-[70%]'
-                    alt="Hello World!" />
-
-                <button onClick={e => setModalImageIndex(-1)} className='bg-jamali-white z-10 mt-10 px-8 py-3'>Close</button>
-            </div>}
 
         </div >
 

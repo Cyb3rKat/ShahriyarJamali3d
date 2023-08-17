@@ -18,11 +18,13 @@ const ContactPage = () => {
     const [userName, setuserName] = useState("")
     const [userEmail, setuserEmail] = useState("")
     const [userMessage, setuserMessage] = useState("")
+    const [emailisSending, setEmailisSending] = useState(false)
     const [emailSent, setemailSent] = useState(false)
     const [emailError, setEmailError] = useState(false)
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setEmailisSending(true)
 
         if (validator.isEmail(userEmail)) {
             if (userName && userMessage) {
@@ -36,9 +38,12 @@ const ContactPage = () => {
                     setuserEmail("")
                     setuserMessage("")
                     toast('Email Sent Successfully')
+                    setEmailisSending(false)
                 }).catch(err => {
                     setEmailError(err)
                     console.log(err)
+                    setEmailisSending(false)
+
                 })
 
             } else {
@@ -70,7 +75,7 @@ const ContactPage = () => {
                             <input type="text" name="user_name" value={userName} onChange={e => setuserName(e.target.value)} placeholder='Name' className='py-2 bg-transparent border-1 border-jamali-white border outline-none rounded-md px-2' />
                             <input type="email" name="user_email" value={userEmail} onChange={e => setuserEmail(e.target.value)} placeholder='Email Address' className='py-2 bg-transparent border-1 border-jamali-white border outline-none rounded-md px-2' />
                             <textarea name="message" placeholder='Message' value={userMessage} onChange={e => setuserMessage(e.target.value)} className='py-2 bg-transparent border-1 border-jamali-white border outline-none rounded-md px-2' />
-                            <input type="submit" value={`${emailSent ? 'Email Sent Successfully' : 'Send'}`} className={`text-white py-2 px-6 bg-jamali-orange ${emailError ? 'bg-red-900' : ''} ${emailSent ? 'bg-green-900' : ''}`} />
+                            <input type="submit" value={`${emailisSending ? 'Sending' : 'Send'}`} className={`hover:cursor-pointer text-white py-2 px-6 ${emailisSending ? 'bg-gray-600' : 'bg-jamali-orange'}`} disabled={emailisSending} />
                         </form>
                         <ToastContainer
                             position="bottom-center"
@@ -86,7 +91,7 @@ const ContactPage = () => {
                     </div>
                 </div>
 
-                <p className='absolute  bottom-0 text-[10px] text-jamali-white  pb-10'>© All Rights Reserved, Shahriyar Jamali 2023</p>
+                <p className='absolute  bottom-0 text-[12px] text-jamali-white  pb-10'>© All Rights Reserved, Shahriyar Jamali 2023</p>
             </div>
         </>
     )

@@ -126,15 +126,15 @@ const AboutMeSection = () => {
                     <p className={`hover:cursor-pointer border border-1 border-white px-4 py-2 rounded-full  ${activelang == 'en' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('en')
                         setActiveLang('en')
-                    }} >English</p>
+                    }} >En</p>
                     <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ir' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ir')
                         setActiveLang('ir')
-                    }} >Persian</p>
+                    }} >Fa</p>
                     <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ar' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ar')
                         setActiveLang('ar')
-                    }} >Arabic</p>
+                    }} >Ar</p>
                 </div>
             </div>
 

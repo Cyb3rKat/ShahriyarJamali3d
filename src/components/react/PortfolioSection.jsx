@@ -896,7 +896,7 @@ const PortfolioSection = () => {
     return (
 
         <div id='portfolio' className='relative bg-jamali-black flex flex-col items-center justify-center min-h-screen pt-10'>
-            <h1 className='text-3xl mb-10 text-white'>Portfolio</h1>
+            <h1 className='text-3xl mb-10 text-jamali-white'>Portfolio</h1>
             <div className='mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2'>
                 <button className={`border-jamali-white border-2   px-10 py-2  rounded-md ${category == 'calligraphy' ? 'bg-jamali-white text-black' : 'text-white'}`}
                     onClick={e => setCategory('calligraphy')}

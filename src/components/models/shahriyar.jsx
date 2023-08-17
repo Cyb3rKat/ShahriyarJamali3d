@@ -9,7 +9,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function ShahriyarModel(props) {
-    const { nodes, materials } = useGLTF("/model.glb")
+    const { nodes, materials } = useGLTF("/model2.glb")
 
 
     return (
@@ -1747,4 +1747,4 @@ export default function ShahriyarModel(props) {
         </group>);
 }
 
-useGLTF.preload("//model.glb");
+useGLTF.preload("/model2.glb");

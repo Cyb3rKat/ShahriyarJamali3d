@@ -4,8 +4,8 @@ import { Raleway, Poppins, Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 
 
-const yekan = localFont({
-    src: '../../../public/font/Yekan.woff'
+const iranyekan = localFont({
+    src: '../../../public/font/Iranyekan.ttf'
 })
 
 
@@ -49,7 +49,7 @@ const AboutMeSection = () => {
 
                 <div className={` ${raleway.className} flex  mt-20`}>
                     <div className='w-full text-jamali-white'>
-                        <h1 className=' text-[20px] md:text-[28px] '>About Me</h1>
+                        <h1 className=' text-[20px] md:text-[28px] '>About</h1>
                         <div className='mt-5 border-b-[2px] border-jamali-white w-full'></div>
                     </div>
 
@@ -57,7 +57,7 @@ const AboutMeSection = () => {
 
                 <div id='AboutMe--Information__wrapper' className={` ${opensans.className} flex flex-row-reverse justify-between `}>
 
-                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl md:text-justify flex-wrap text-jamali-white `}>
+                    <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl  flex-wrap text-jamali-white text-justify`}>
 
                         {aboutmeLang == 'en' && <>
                             <p >
@@ -78,7 +78,7 @@ const AboutMeSection = () => {
 
                         </>}
 
-                        {aboutmeLang == 'ir' && <div className={`rtl leading-loose text-xl ${nazanin.className} `}>
+                        {aboutmeLang == 'ir' && <div className={`rtl leading-loose text-sm ${iranyekan.className} `}>
                             <p className=' '>
                                 شهریار جمالی کاپک، هنرمند خوشنویس ایرانی. او در تهران متولد شد و از همان دوران ابتدایی علاقه‌ای عمیقی به خوشنویسی در خود ایجاد کرد. او در طول زندگی‌اش از قدرت هنر و ایده‌پردازی برای پر کردن شکاف بین انسانیت و الهیت استفاده کرده است.<br></br>
                             </p><p className='mt-5'>

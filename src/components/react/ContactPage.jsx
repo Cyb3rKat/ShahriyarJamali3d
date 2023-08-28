@@ -58,7 +58,7 @@ const ContactPage = () => {
         <>
             <div id="contact" className='bg-jamali-black flex flex-col items-center justify-center w-full  py-20 relative'>
 
-                <div className='w-full flex flex-col justify-center items-center sm:px-[20%] px-[15%]'>
+                <div className='w-full flex flex-col justify-center items-center sm:px-[20%] px-[15%] ml-10' >
 
                     <div className='flex justify-between items-center   w-full'>
 
@@ -70,7 +70,7 @@ const ContactPage = () => {
 
 
 
-                    <div className='  w-full  mt-10'>
+                    <div className='w-full  mt-10 '>
                         <form ref={form} onSubmit={sendEmail} className='flex flex-col space-y-5 text-white mb-10'>
                             <input type="text" name="user_name" value={userName} onChange={e => setuserName(e.target.value)} placeholder='Name' className='py-2 bg-transparent border-1 border-jamali-white border outline-none rounded-md px-2' />
                             <input type="email" name="user_email" value={userEmail} onChange={e => setuserEmail(e.target.value)} placeholder='Email Address' className='py-2 bg-transparent border-1 border-jamali-white border outline-none rounded-md px-2' />

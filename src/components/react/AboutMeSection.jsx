@@ -3,7 +3,9 @@ import Image from "next/image";
 import { Raleway, Poppins, Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 
-
+const NotoNaskhArabic = localFont({
+    src: '../../../public/font/NotoNaskhArabic.ttf'
+})
 const iranyekan = localFont({
     src: '../../../public/font/Iranyekan.ttf'
 })
@@ -98,7 +100,7 @@ const AboutMeSection = () => {
                         </div>}
 
 
-                        {aboutmeLang == 'ar' && <div className={`rtl leading-loose text-xl ${arabicFont.className} `}>
+                        {aboutmeLang == 'ar' && <div className={`rtl leading-loose text-md ${NotoNaskhArabic.className} `}>
                             <p className=' '>
                                 شهريار جمالي كابيك، خطاط إيراني. ولد في طهران وطور اهتماماً عميقاً بالفن الخط منذ سن مبكرة.
                                 طوال حياته إستخدم قوة الفن والفكر لسد الفجوة بين الإنسانية والالهيت.

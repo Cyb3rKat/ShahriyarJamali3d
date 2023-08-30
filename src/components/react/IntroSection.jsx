@@ -24,7 +24,7 @@ const raleway = Raleway({
 const IntroSection = () => {
     return (
         <div id="intro" className='bg-jamali-black scroll-smooth flex flex-col items-center justify-center w-full  min-h-screen'>
-            <Image src={mylogo} width={150} className='mb-10 grayscale bg-jamali-white rounded-2xl p-2' alt='mylogo' />
+            <Image src={mylogo} width={135} className='mb-10 grayscale bg-jamali-white rounded-2xl p-2' alt='mylogo' />
             <h1 className={` ${raleway.className} text-2xl md:text-5xl leading-relaxed md:leading-loose font-semibold uppercase text-jamali-white`}>Shahriyar Jamali</h1>
             <p className={` ${poppins.className} text-xl md:text-3xl leading-relaxed  md:leading-loose font-light `}><span className='text-jamali-orange '>
 

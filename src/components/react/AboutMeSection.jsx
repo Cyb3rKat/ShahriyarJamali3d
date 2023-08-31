@@ -57,7 +57,11 @@ const AboutMeSection = () => {
 
                 </div>
 
-                <div id='AboutMe--Information__wrapper' className={` ${opensans.className} flex flex-row-reverse justify-between `}>
+                <div id='AboutMe--Information__wrapper' className={` ${opensans.className} flex flex-row-reverse justify-between `} onCopy={(evt) => {
+                    evt.preventDefault()
+                    return 'Cant Copy'
+
+                }}>
 
                     <div className={`${poppins.className} flex  flex-col information-wrapper space-y-5 w-full max-w-3xl  flex-wrap text-jamali-white text-justify`}>
 

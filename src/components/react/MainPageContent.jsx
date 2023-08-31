@@ -19,20 +19,15 @@ import SkillsSection from './SkillsSection';
 const MainPageContent = () => {
     return (
         <>
-            <div className='w-full scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 scroll-smooth'>
+            <div className='w-full scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 scroll-smooth' onContextMenu={(evt) => {
+                evt.preventDefault()
+            }}>
                 <IntroSection />
                 <AboutMeSection />
                 <PortfolioSection />
                 <SkillsSection />
                 <ContactPage />
             </div>
-            {/* <div className='fixed right-5 h-full  w-10 flex flex-col items-center justify-center space-y-2'>
-                <Link href={'#intro'}><Image className='bg-[#0563bb] p-2 rounded-full' src={homesvg} width={40} height={40} /></Link>
-                <Link href={'#about'}><Image className='bg-[#0563bb] p-2 rounded-full' src={aboutsvg} width={40} height={40} /></Link>
-                <Link href={'#portfolio'}><Image className='bg-[#0563bb] p-2 rounded-full' src={briefcasesvg} width={40} height={40} /></Link>
-                <Link href={'#contact'}><Image className='bg-[#0563bb] p-2 rounded-full' src={speechsvg} width={40} height={40} /></Link>
-
-            </div> */}
         </>
     )
 }

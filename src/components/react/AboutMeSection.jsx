@@ -129,15 +129,15 @@ const AboutMeSection = () => {
                     </div>
                 </div>
                 <div className='flex space-x-3 w-full justify-center'>
-                    <p className={`hover:cursor-pointer border border-1 border-white px-4 py-2 rounded-full  ${activelang == 'en' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
+                    <p className={`hover:cursor-pointer border border-1 border-white px-6 py-2 rounded-xl  ${activelang == 'en' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('en')
                         setActiveLang('en')
                     }} >EN</p>
-                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ir' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
+                    <p className={`hover:cursor-pointer border border-1border-white px-6 py-2 rounded-xl  ${activelang == 'ir' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ir')
                         setActiveLang('ir')
                     }} >FA</p>
-                    <p className={`hover:cursor-pointer border border-1border-white px-4 py-2 rounded-full  ${activelang == 'ar' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
+                    <p className={`hover:cursor-pointer border border-1border-white px-6 py-2 rounded-xl  ${activelang == 'ar' ? 'bg-jamali-white text-black' : 'text-white'}`} onClick={e => {
                         setAboutmeLang('ar')
                         setActiveLang('ar')
                     }} >AR</p>

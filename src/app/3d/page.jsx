@@ -28,11 +28,11 @@ function Loader() {
 
 
 
-    return (<div className='h-screen w-screen bg-black flex flex-col justify-center items-center text-white'>
+    return (<div className='h-screen w-screen bg-black flex flex-col justify-center items-center text-white text-center ml-4'>
         <h1>Loading Experience</h1>
-        <h1>This can take upto 2 to 3 minutes depending on your connection please be patient</h1>
+        <h1>This can take upto 2 to 3 minutes<br></br> please be patient</h1>
         <h2>{progress.toFixed(1)} % loaded</h2>
-    </div>)
+    </div >)
 }
 
 

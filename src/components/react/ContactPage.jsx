@@ -91,7 +91,7 @@ const ContactPage = () => {
                     </div>
                 </div>
 
-                <p className='absolute  bottom-0 text-[12px] text-jamali-white  pb-10'>© All Rights Reserved, Shahriyar Jamali 2023</p>
+                <p className='absolute  bottom-0 text-[12px] text-jamali-white  pb-10 ml-10'>© All Rights Reserved, Shahriyar Jamali 2023</p>
             </div>
         </>
     )

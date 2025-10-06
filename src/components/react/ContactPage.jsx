@@ -33,7 +33,7 @@ const ContactPage = () => {
                     reply_to: userEmail,
                     message: userMessage
                 };
-                emailjs.send('service_y6ulza6', 'template_emrlqew', templateParams, 'y9WJOH6JDu3pWnWWa').then(() => {
+                emailjs.send('service_oj4v6jw', 'template_emrlqew', templateParams, 'y9WJOH6JDu3pWnWWa').then(() => {
                     setuserName("")
                     setuserEmail("")
                     setuserMessage("")

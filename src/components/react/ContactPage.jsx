@@ -22,37 +22,47 @@ const ContactPage = () => {
     const [emailSent, setemailSent] = useState(false)
     const [emailError, setEmailError] = useState(false)
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
-        setEmailisSending(true)
+        setEmailisSending(true);
 
         if (validator.isEmail(userEmail)) {
             if (userName && userMessage) {
-                const templateParams = {
-                    from_name: userName,
-                    reply_to: userEmail,
-                    message: userMessage
-                };
-                emailjs.send('service_oj4v6jw', 'template_emrlqew', templateParams, 'y9WJOH6JDu3pWnWWa').then(() => {
-                    setuserName("")
-                    setuserEmail("")
-                    setuserMessage("")
-                    toast('Email Sent Successfully')
-                    setEmailisSending(false)
-                }).catch(err => {
-                    setEmailError(err)
-                    console.log(err)
-                    setEmailisSending(false)
+                try {
+                    const response = await fetch('/api/send-email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            from_name: userName,
+                            reply_to: userEmail,
+                            message: userMessage
+                        })
+                    });
 
-                })
-
+                    if (response.ok) {
+                        setuserName("");
+                        setuserEmail("");
+                        setuserMessage("");
+                        toast('Email Sent Successfully');
+                    } else {
+                        toast('Failed to send email');
+                    }
+                } catch (err) {
+                    console.error(err);
+                    toast('Error sending email');
+                }
+                setEmailisSending(false);
             } else {
-                alert('please provide valid information ')
+                alert('please provide valid information');
+                setEmailisSending(false);
             }
+        } else {
+            alert('please provide a valid email');
+            setEmailisSending(false);
         }
-
-
-    }
+    };
 
     return (
         <>

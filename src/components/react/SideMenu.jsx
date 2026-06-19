@@ -5,6 +5,7 @@ import instagramIcon from '/public/social/instagram.svg'
 import pintrestIcon from '/public/social/pintrest.svg'
 import dribbbleIcon from '/public/social/dribbble.svg'
 import callIcon from '/public/social/call.png'
+import telegramIcon from '/public/social/telegram.png'
 import Link from 'next/link'
 
 const SideMenu = () => {
@@ -13,6 +14,7 @@ const SideMenu = () => {
             <Link href='/' className=" h-48 vertical-rl w-full -rotate-180  flex items-center text-xl md:text-2xl text-jamali-black ">Shahriyar Jamali</Link>
             <div className=" grow"></div>
             <div className=" h-24 flex flex-col items-center justify-center w-full space-y-5">
+                <a href='https://www.instagram.com/shahriyarjamali.art/' target='_blank'><Image alt='telegram'  className="w-5" src={telegramIcon} /></a>
                 <a href='https://www.instagram.com/shahriyarjamali.art/' target='_blank'><Image alt='instagram' src={instagramIcon} /></a>
 
                 <a href='https://www.pinterest.com/shahriyarjamaliart/' target='_blank'><Image alt='pintrest' src={pintrestIcon} /></a>
